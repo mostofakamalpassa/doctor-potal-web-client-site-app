@@ -25,9 +25,9 @@ const AppointmentBanners = () => {
   return (
       <>
       <style>{css}</style>
-    <div class="hero min-h-screen">
-      <div class="hero-content flex-col lg:flex-row-reverse">
-        <img src={cheir} class="max-w-sm rounded-lg shadow-2xl" alt="" />
+    <div className="hero min-h-screen">
+      <div className="hero-content flex-col lg:flex-row-reverse">
+        <img src={cheir} className="max-w-sm rounded-lg shadow-2xl" alt="" />
         <div>
           {<DayPicker mode="single" selected={date} onSelect={setDate} modifiersClassNames={{selected: 'my-selected',
           today: 'my-today'}}/>}
