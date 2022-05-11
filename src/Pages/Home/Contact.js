@@ -4,28 +4,28 @@ import appointmentImg from '../../assets/images/appointment.png'
 
 const Contact = () => {
     return (
-        <div class=" my-4" style={{background:`url(${appointmentImg})`}}>
-        <div class="mx-auto py-5">
-          <div class="text-center">
-            <h1 class="text-3xl font-bold text-primary">Contact Us</h1>
-            <p class="py-6 text-center text-4xl text-white">Stay connected with us</p>
+        <div className=" my-4" style={{background:`url(${appointmentImg})`}}>
+        <div className="mx-auto py-5">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-primary">Contact Us</h1>
+            <p className="py-6 text-center text-4xl text-white">Stay connected with us</p>
           </div>
           </div>
-          <div class="mx-auto">
-            <div class="card-body mx-auto lg:w-[600px]">
-              <div class="form-control">
-                <input type="text" placeholder="Email Address" class="input input-bordered " />
+          <div className="mx-auto">
+            <div className="card-body mx-auto lg:w-[600px]">
+              <div className="form-control">
+                <input type="text" placeholder="Email Address" className="input input-bordered " />
               </div>
           
-              <div class="form-control">
-                <input type="text" placeholder="Subject" class="input input-bordered" />
+              <div className="form-control">
+                <input type="text" placeholder="Subject" className="input input-bordered" />
               </div>
           
-              <div class="form-control">
-                <textarea type="text" placeholder="Your message" class="textarea textarea-ghost bg-white"></textarea>
+              <div className="form-control">
+                <textarea type="text" placeholder="Your message" className="textarea textarea-ghost bg-white"></textarea>
               </div>
           
-              <div class="form-control w-24 mx-auto mt-6">
+              <div className="form-control w-24 mx-auto mt-6">
                <PrimaryButton>Submit</PrimaryButton>
               </div>
             </div>
