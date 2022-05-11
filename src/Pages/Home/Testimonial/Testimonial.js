@@ -42,7 +42,7 @@ const Testimonial = () => {
                 </div>
             </div>
 
-            <div className='lg:flex justify-center gap-3 my-6'>
+            <div className='lg:flex justify-center gap-3 my-6 sm:my-10'>
 
                 {
                     reviews.map(review => (<TestimonalCar review={review}></TestimonalCar>))

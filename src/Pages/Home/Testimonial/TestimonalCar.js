@@ -8,7 +8,10 @@ const TestimonalCar = ({review}) => {
         <p className="text-sm">{review.say}</p>
         <div class="flex justify-center my-4">
             <img src={review.img} alt="" />
-            <h3 className="text-lg font-bold self-center ml-4">{review.name}</h3>
+           <div className="ml-4 self-center">
+           <h3 className="text-lg font-bold ">{review.name}</h3>
+            <h4 className="text-lg font-bold">location</h4>
+           </div>
         </div>
       </div>
     </div>
