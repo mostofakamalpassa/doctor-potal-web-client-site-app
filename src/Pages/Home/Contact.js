@@ -4,14 +4,15 @@ import appointmentImg from '../../assets/images/appointment.png'
 
 const Contact = () => {
     return (
-        <div class="hero min-h-screen my-28" style={{background:`url(${appointmentImg})`}}>
+        <div class=" my-4" style={{background:`url(${appointmentImg})`}}>
         <div class="mx-auto py-5">
           <div class="text-center">
             <h1 class="text-3xl font-bold text-primary">Contact Us</h1>
             <p class="py-6 text-center text-4xl text-white">Stay connected with us</p>
           </div>
-          <div class="">
-            <div class="card-body">
+          </div>
+          <div class="mx-auto">
+            <div class="card-body mx-auto lg:w-[600px]">
               <div class="form-control">
                 <input type="text" placeholder="Email Address" class="input input-bordered " />
               </div>
@@ -29,7 +30,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-        </div>
+        
       </div>
     );
 };
