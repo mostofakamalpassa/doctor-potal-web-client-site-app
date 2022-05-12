@@ -5,8 +5,8 @@ import { DayPicker } from "react-day-picker";
 import "react-day-picker/dist/style.css";
 import { format } from "date-fns";
 
-const AppointmentBanners = () => {
-  const [date, setDate] = useState(new Date());
+const AppointmentBanners = ({date, setDate}) => {
+ 
   const css =`
   .my-selected:not([disabled]) { 
     font-weight: bold; 

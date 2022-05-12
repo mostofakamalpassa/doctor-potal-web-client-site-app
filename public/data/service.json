@@ -1,0 +1,82 @@
+[
+    {
+        "_id": 1,
+        "name":"Teeth Orthodontic",
+        "slots":[
+            "8.00 AM - 8.30 AM",
+            "8.00 AM - 8.30 AM",
+            "8.00 AM - 8.30 AM",
+            "8.00 AM - 8.30 AM",
+            "8.00 AM - 8.30 AM",
+            "8.00 AM - 8.30 AM"
+        ]
+    },
+
+    {
+        "_id": 2,
+        "name":"Cosmetic Dentistry",
+        "slots":[
+            "8.00 AM - 8.30 AM",
+            "8.00 AM - 8.30 AM",
+            "8.00 AM - 8.30 AM",
+            "8.00 AM - 8.30 AM",
+            "8.00 AM - 8.30 AM",
+            "8.00 AM - 8.30 AM"
+        ]
+    },
+
+    {
+        "_id": 3,
+        "name":"Teeth Cleaning",
+        "slots":[
+            "8.00 AM - 8.30 AM",
+            "8.00 AM - 8.30 AM",
+            "8.00 AM - 8.30 AM",
+            "8.00 AM - 8.30 AM",
+            "8.00 AM - 8.30 AM",
+            "8.00 AM - 8.30 AM"
+        ]
+    },
+
+    {
+        "_id": 4,
+        "name":"Teeth abcd",
+        "slots":[
+            "8.00 AM - 8.30 AM",
+            "8.00 AM - 8.30 AM",
+            "8.00 AM - 8.30 AM",
+            "8.00 AM - 8.30 AM",
+            "8.00 AM - 8.30 AM",
+            "8.00 AM - 8.30 AM"
+        ]
+    },
+
+    {
+        "_id": 5,
+        "name":"Teeth efg",
+        "slots":[
+            "8.00 AM - 8.30 AM",
+            "8.00 AM - 8.30 AM",
+            "8.00 AM - 8.30 AM",
+            "8.00 AM - 8.30 AM",
+            "8.00 AM - 8.30 AM",
+            "8.00 AM - 8.30 AM"
+        ]
+    },
+
+    {
+        "_id": 6,
+        "name":"Teeth onter",
+        "slots":[
+            "8.00 AM - 8.30 AM",
+            "8.00 AM - 8.30 AM",
+            "8.00 AM - 8.30 AM",
+            "8.00 AM - 8.30 AM",
+            "8.00 AM - 8.30 AM",
+            "8.00 AM - 8.30 AM"
+        ]
+    }
+
+
+
+]
