@@ -18,7 +18,7 @@ const AvailablAppointment = ({ date, setDate }) => {
       </h2>
 
       <div className="grid grid-cols-3 gap-4 my-6">
-       {service.map(ser =>  <SingleAppointmentCard key={ser._id} service={ser}></SingleAppointmentCard>)}
+       {service.map(ser =>  <SingleAppointmentCard key={ser._id} service={ser} date={date}></SingleAppointmentCard>)}
       </div>
     </div>
   );
