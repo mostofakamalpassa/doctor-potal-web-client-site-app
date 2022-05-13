@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import BookingAppointment from './BookingAppointment';
 const SingleAppointmentCard = ({service, date}) => {
 
+  console.log("service ff ", service)
+
   const [treatment, setTreatment] = useState(null);
     return (
         <div className="card bg-base-100 shadow-xl my-4">
