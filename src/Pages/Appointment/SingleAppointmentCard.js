@@ -11,12 +11,12 @@ const SingleAppointmentCard = ({service, date}) => {
                 service?.slots.length ?  <p className='text-center font-bold'>{service?.slots[0]}  </p> :  <p className='text-center text-red-500'>Booking is fulled</p>
             }
           <p className='justify-center text-center'>{service?.slots.length} SPACES AVAILABLE </p>
-          <p className='text-center'>If a dog chews shoes whose shoes does he choose?</p>
-          <div className="card-actions justify-center">
+        
+          <div className="card-actions justify-center ">
             <label htmlFor='booking-modal'  disabled={service?.slots.length === 0} onClick={()=> setTreatment(service)} className="btn btn-primary text-white">Book Appointment</label>
           </div>
         </div>
-        {treatment && <BookingAppointment treatment={treatment} date={date}></BookingAppointment>}
+        {treatment && <BookingAppointment treatment={treatment} setTreatment= {setTreatment} date={date}></BookingAppointment>}
       </div>
     );
 };
