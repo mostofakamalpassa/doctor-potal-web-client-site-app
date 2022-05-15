@@ -13,13 +13,13 @@ const Login = () => {
         <h2 className="text-center text-2xl font-bold">Login</h2>
 
         <form onSubmit={handleSubmit(onSubmit)}>
-      <input {...register("firstName", { required: true })} />
+      <input {...register("firstName", { required: true })}  className="input input-bordered w-full max-w-xs my-6"/>
       {errors.firstName?.type === 'required' && "First name is required"}
       
-      <input {...register("lastName", { required: true })} />
+      <input className="input input-bordered w-full max-w-xs" {...register("lastName", { required: true })} />
       {errors.lastName && "Last name is required"}
-      <div className="card-actions justify-center">
-      <input type="submit" value="Login" className="btn btn-primary text-white" />
+      <div  className="card-actions justify-center">
+      <input  type="submit" value="Login" className="btn btn-primary text-white my-6" />
       </div>
     </form>
      
@@ -28,10 +28,11 @@ const Login = () => {
 
 
        
-
+    <p>You do not have account <small className="text-primary">Create account</small></p>
         <div className="divider">OR</div>
+      
         <button className="btn btn-outline" onClick={()=>signInWithGoogle()}>Continue with Google</button>
-
+        <button className="btn btn-outline">Continue with Github</button>
       </div>
     </div>
     </div>
