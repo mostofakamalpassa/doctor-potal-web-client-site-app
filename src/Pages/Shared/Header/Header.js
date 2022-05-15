@@ -22,7 +22,7 @@ const Header = () => {
         <Link to="/contact">Contact</Link>
       </li>
       <li>
-        <Link to="/login">Login</Link>
+        {user ? '': <Link to="/login">Login</Link>}
       </li>
       <li>
         {user? <p className="link text-blue-600 font-bold" onClick={()=>signOut(auth)}>Sign out</p>:  <Link to="/register">Sign up</Link> }
