@@ -2,8 +2,8 @@ import React from 'react';
 
 const NotFound = () => {
     return (
-        <div>
-            <h2>nothing found</h2>
+        <div className='mx-auto block'>
+            <img className='mx-auto mt-12' src="/assets/images/404.jpg" alt="" />
         </div>
     );
 };

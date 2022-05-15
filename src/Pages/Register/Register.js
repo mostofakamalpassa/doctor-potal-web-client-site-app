@@ -1,17 +1,59 @@
 import React from "react";
-import { useSignInWithGoogle } from "react-firebase-hooks/auth";
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Loading from "../../components/Loading/Loading";
+
 const Register = () => {
+    const navigate = useNavigate();
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+      ] = useCreateUserWithEmailAndPassword(auth);
+
+
   const {
     register,
     formState: { errors },
     handleSubmit,
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
     useSignInWithGoogle(auth);
+
+    if (error  || googleError) {
+        return (
+          <div>
+            <p className="text-red-500">Error: {error?.message}</p>
+          </div>
+        );
+      }
+      if (loading || googleLoading ) {
+        return <Loading></Loading>
+      }
+      if (user || googleUser) {
+        return (
+          <div>
+              {console.log(user)}
+            <p>Signed In User: {user?.email}</p>
+            {navigate('/')}
+          </div>
+        );
+      }
+      const onSubmit = (data) =>{
+        //console.log(data);
+        const email = data.email;
+        const password = data.password;
+        const displayName = data.userName;
+       
+        createUserWithEmailAndPassword(email, password);
+        updateProfile({displayName});
+     }
+
 
     
   return (
@@ -23,8 +65,9 @@ const Register = () => {
           <form onSubmit={handleSubmit(onSubmit)}>
             <input
               {...register("userName", { required: true })}
-              className="input input-bordered w-full max-w-xs my-6"
+              className="input input-bordered w-full max-w-xs mt-6"
               placeholder="Your full  name "
+              type="text"
             />
             {errors.userName?.type === "required" && (
               <p className="text-red-500">User name is required</p>
@@ -35,16 +78,16 @@ const Register = () => {
               {...register("email", { required: true })}
               className="input input-bordered w-full max-w-xs my-6"
               placeholder="Enter Your Email"
+              type="email"
             />
             {errors.email?.type === "required" && (
               <p className="text-red-500">Email is required</p>
             )}
 
-
-
             <input
               className="input input-bordered w-full max-w-xs"
-              {...register("password", { required: true })} placeholder="password"
+              {...register("password", { required: true })} placeholder="Password"
+              type="password"
             />
             {errors.password && (
               <p className="text-red-500"> Password is required </p>
