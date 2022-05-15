@@ -9,7 +9,7 @@ const AvailablAppointment = ({ date, setDate }) => {
         fetch('data/service.json')
         .then(res => res.json())
         .then(data => setService(data));
-    },[])
+    },[]);
 
   return (
     <div className="my-6">
