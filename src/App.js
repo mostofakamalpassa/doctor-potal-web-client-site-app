@@ -9,6 +9,7 @@ import Review from './Pages/Review/Review';
 import Login from './Pages/Login/Login';
 import NotFound from './components/NotFound/NotFound';
 import Contact from './Pages/Contact/Contact';
+import Register from './Pages/Register/Register';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path='/review' element={<Review></Review>}></Route>
           <Route path='/login' element={<Login></Login>}></Route>
           <Route path='/contact' element={<Contact></Contact>}></Route>
+          <Route path='/register' element={<Register></Register>}></Route>
           <Route path='*' element={<NotFound></NotFound>}></Route>
         </Routes>
       
